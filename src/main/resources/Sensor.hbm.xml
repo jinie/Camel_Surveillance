@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+	
+<hibernate-mapping>
+   <class name="Sensor" table="Sensors">
+      <meta attribute="class-description">
+         This class contains Sensor detail. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="host" column="host" type="string"/>
+      <property name="sensor" column="sensorId" type="string"/>
+      <property name="alias" column="alias" type="string"/>
+      <property name="rrdGraph" column="rrdGraph" type="boolean"/>
+      <property name="last_update" column="last_update" type="integer"/>
+      <property name="alert_low" column="alert_low" type="double"/>
+      <property name="alert_high" column="alert_high" type="double"/>
+      <property name="alert_date" column="alert_date" type="integer"/>
+      <property name="notification_sent" column="notification_sent" type="boolean"/>
+      <property name="alert_temp" column="alert_temp" type="double"/>
+   </class>
+</hibernate-mapping>
