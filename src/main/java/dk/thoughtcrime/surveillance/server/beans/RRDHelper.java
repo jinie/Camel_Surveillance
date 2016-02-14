@@ -62,8 +62,8 @@ public class RRDHelper {
         DateTime now = DateTime.now().withTimeAtStartOfDay();
         Calendar dawn = calculator.getCivilSunriseCalendarForDate(now.toCalendar(new Locale("da", "DK")));
         Calendar dusk = calculator.getCivilSunsetCalendarForDate(now.toCalendar(new Locale("da", "DK")));
-        Calendar sunrise = calculator.getCivilSunriseCalendarForDate(now.toCalendar(new Locale("da", "DK")));
-        Calendar sunset = calculator.getCivilSunsetCalendarForDate(now.toCalendar(new Locale("da", "DK")));
+        Calendar sunrise = calculator.getOfficialSunriseCalendarForDate(now.toCalendar(new Locale("da", "DK")));
+        Calendar sunset = calculator.getOfficialSunsetCalendarForDate(now.toCalendar(new Locale("da", "DK")));
         boolean sunInfo = true;
 
         defs.add("COMMENT:Location\\t    Last\\t\\tAvg\\t\\tMax\\t\\tMin\\tAlert Low\\tAlert High\\n");
